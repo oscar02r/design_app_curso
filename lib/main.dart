@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Design App',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: HeadersPage(),
