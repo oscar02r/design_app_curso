@@ -114,3 +114,127 @@ class _HeaderTriangularPainter extends CustomPainter{
   }
 
 }
+
+class HeaderPico extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height:double.infinity,
+      width: double.infinity,
+      child: CustomPaint(
+        painter: _HeaderPicoPainter() ,
+      ),
+    );
+  }
+}
+
+class _HeaderPicoPainter extends CustomPainter{
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    //Propiedades
+    paint.color = Color(0xff615AAB);
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth =2.0;
+
+    //Puntos a Dibujar con el lapiz.
+    final path = Path();
+    path.moveTo( 0 , size.height * 0.30);
+    path.lineTo(size.width * 0.5 , size.height * 0.35);
+    path.lineTo(size.width, size.height * 0.30);
+    path.lineTo(size.width, 0);
+    path.lineTo(0, 0);
+    //Dibujar path en pantallta
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+
+    return true;
+  }
+
+}
+
+class HeaderCurvo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height:double.infinity,
+      width: double.infinity,
+      child: CustomPaint(
+        painter: _HeaderCurvoPainter() ,
+      ),
+    );
+  }
+}
+
+class _HeaderCurvoPainter extends CustomPainter{
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    //Propiedades
+    paint.color = Color(0xff615AAB);
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth =20.0;
+
+    //Puntos a Dibujar con el lapiz.
+    final path = Path();
+    path.lineTo( 0 , size.height * 0.25);
+    path.quadraticBezierTo(size.width * 0.50, size.height * 0.40, size.width, size.height * 0.25);
+    path.lineTo(size.width, 0);
+    //Dibujar path en pantallta
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+
+    return true;
+  }
+
+}
+
+class HeaderWave extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height:double.infinity,
+      width: double.infinity,
+      child: CustomPaint(
+        painter: _HeaderWavePainter () ,
+      ),
+    );
+  }
+}
+
+class _HeaderWavePainter extends CustomPainter{
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint();
+    //Propiedades
+    paint.color = Color(0xff615AAB);
+    paint.style = PaintingStyle.fill;
+    paint.strokeWidth =20.0;
+
+    //Puntos a Dibujar con el lapiz.
+    final path = Path();
+    // path.lineTo( 0 , size.height * 0.25);
+    // path.quadraticBezierTo(size.width * 0.25, size.height * 0.30, size.width * 0.5, size.height * 0.25);
+    // path.quadraticBezierTo(size.width * 0.75, size.height * 0.20,  size.width , size.height * 0.25);
+    // path.lineTo(size.width, 0);
+    // //Dibujar path en pantallta
+    // canvas.drawPath(path, paint);
+
+    //path.moveTo(0, size.height);
+    path.lineTo(size.width, size.height * 0.25);
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+
+    return true;
+  }
+
+}
