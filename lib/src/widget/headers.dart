@@ -225,9 +225,12 @@ class _HeaderWavePainter extends CustomPainter{
     // path.lineTo(size.width, 0);
     // //Dibujar path en pantallta
     // canvas.drawPath(path, paint);
-
-    //path.moveTo(0, size.height);
-    path.lineTo(size.width, size.height * 0.25);
+   //Wave abajo
+    path.moveTo(0, size.height);
+    path.lineTo(0, size.height * 0.75);
+    path.quadraticBezierTo(size.width * 0.25, size.height *0.80 , size.width * 0.5, size.height * 0.75);
+    path.quadraticBezierTo(size.width * 0.75, size.height * 0.70 , size.width, size.height * 0.75);
+    path.lineTo(size.width, size.height );
     canvas.drawPath(path, paint);
   }
 
