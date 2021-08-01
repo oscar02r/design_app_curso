@@ -1,3 +1,4 @@
+import 'package:design_app_curso/src/pages/animaciones_page.dart';
 import 'package:design_app_curso/src/pages/headers_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HeadersPage(),
+      home: AnimacionesPage(),
     );
   }
 }
